@@ -4,18 +4,10 @@ const cors = require("cors")
 app.use(express.json())
 require("dotenv").config()
 
-const allowedOrigins = ['https://quest-labs-react.vercel.app/'];
-app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}));
-const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
+
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+app.use(cors())
 
 app.post("/", async (req, res) => {
     const { usecase, userInput } = req.body
