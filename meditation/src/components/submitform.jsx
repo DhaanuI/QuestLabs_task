@@ -25,7 +25,7 @@ const Form = ({ handleFormSubmit, handleResponse }) => {
 
         try {
             handleFormSubmit(true);
-            const response = await axios.post('https://quest-labs-task.vercel.app/', requestBody);
+            const response = await axios.post('http://localhost:8080/', requestBody);
 
             handleResponse(response.data.generatedText)
             setFormData({
