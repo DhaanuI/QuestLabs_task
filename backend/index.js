@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 app.use(express.json())
+require("dotenv").config()
 
 app.use(cors())
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
@@ -29,7 +30,7 @@ app.post("/", async (req, res) => {
         }
 
         const responseData = await data.json();
-        
+
         res.json(responseData);
     } catch (err) {
         console.error(err);
@@ -37,4 +38,4 @@ app.post("/", async (req, res) => {
     }
 })
 
-app.listen(8080, () => console.log("Server is running at 8080"))
+app.listen(process.env.port, () => console.log(`Server is running at ${process.env.port}`))
