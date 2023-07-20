@@ -5,9 +5,9 @@ app.use(express.json())
 require("dotenv").config()
 
 
-
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 app.use(cors())
+
 
 app.post("/", async (req, res) => {
     const { usecase, userInput } = req.body

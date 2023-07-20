@@ -47,8 +47,8 @@ const Form = ({ handleFormSubmit, handleResponse }) => {
     };
 
     return (
-        <>
-            <h1 style={{ color: '#5bc0de' }}>Tell us about yourself</h1>
+        <div style={{ marginTop: '-200px' }}>
+            <h1 style={{ color: 'white' }}>Tell us about yourself</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -74,17 +74,21 @@ const Form = ({ handleFormSubmit, handleResponse }) => {
                 <br />
                 <input type="submit" />
             </form>
-        </>
+        </div>
     )
 }
 
 const Heading = () => {
     return (
-        <>
-            <h2 style={{ color: "#4caf50" }}>Experience the profound benefits of yoga and meditation.
-                <br />
-                Join us on a journey of self-discovery and inner peace today.</h2>
-        </>
+        <div >
+            <div style={{ marginBottom: "-20px" }}>
+                <h2 style={{ color: "#e0e0e0" }}>Experience the profound benefits of yoga and meditation.
+                    <br />
+                    Join us on a journey of self-discovery and inner peace today.</h2>
+            </div>
+
+            <img src="https://e0.pxfuel.com/wallpapers/276/395/desktop-wallpaper-buddha-buddhism-meditation-harmony-spiritual-meditation.jpg" alt="" />
+        </div>
     )
 }
 
