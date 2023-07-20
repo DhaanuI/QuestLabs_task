@@ -4,7 +4,8 @@ const cors = require("cors")
 app.use(express.json())
 require("dotenv").config()
 
-app.use(cors())
+app.use(cors({ origin: "https://quest-labs-react.vercel.app/" }))
+
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 
