@@ -1,0 +1,22 @@
+.response {
+    width: 80%;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #f0f0f0;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+  
+    font-style: italic;
+    color: #007bff;
+    background-color: #eaf2ff;
+   
+}
+
+.response h4 {
+    margin-bottom: 15px;
+}
